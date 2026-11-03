@@ -1,0 +1,12 @@
+{
+  "installed": "/Users/lilnhan/.codex/skills/ai-hackathon",
+  "backup": "/private/tmp/ai-hackathon-before-audit-8a4hdze0",
+  "sha256": {
+    "SKILL.md": "51aa839f918ab35f172975980dd01bd7a26c550a591923b83f97d86738bd9fd6",
+    "agents/openai.yaml": "ceab22ab3828c27477e55ecd1e4b33256eedad737914e7cca51ce1900fa242cb",
+    "references/full-run.md": "c4dd2938512a75ca10b2be8646da5ab2d6d56183865149a77515b9f8487a333b",
+    "references/presentation-docs.md": "60448944e8ac43d0b7f8d6ddcafe32c9c3df9e4c57a7faaa321d71c32e76d245",
+    "references/database-erd.md": "891a53fbe817d6ee09ccbb57d9362021e4f3e46fe7084a1f56bd0c4082715591",
+    "references/playbook.md": "8ed458cdf888dff36e56231d6cba7e0177814f18e6ff9559b478b17dc2327519"
+  }
+}

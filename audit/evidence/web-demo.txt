@@ -1,0 +1,43 @@
+SEED [
+  {
+    "id": 1,
+    "name": "An Demo"
+  },
+  {
+    "id": 2,
+    "name": "Bình Demo"
+  },
+  {
+    "id": 3,
+    "name": "Chi Demo"
+  }
+]
+SEED [
+  {
+    "id": 1,
+    "name": "An Demo"
+  },
+  {
+    "id": 2,
+    "name": "Bình Demo"
+  },
+  {
+    "id": 3,
+    "name": "Chi Demo"
+  }
+]
+GET /api/members 200 [{"id": 1, "name": "An Demo"}, {"id": 2, "name": "Bình Demo"}, {"id": 3, "name": "Chi Demo"}]
+GET /api/tasks 200 []
+POST /api/projects 201 {"id": 1, "name": "Demo workshop"}
+POST /api/tasks 201 {"id": 1, "project_id": 1, "title": "Chuẩn bị phòng", "assignee_id": 1, "status": "TODO", "project_name": "Demo workshop", "assignee_name": "An Demo"}
+POST /api/tasks 201 {"id": 2, "project_id": 1, "title": "Kiểm tra máy chiếu", "assignee_id": null, "status": "TODO", "project_name": "Demo workshop", "assignee_name": null}
+POST /api/projects 400 {"error": "Tên dự án không được để trống."}
+POST /api/tasks 404 {"error": "Dự án không tồn tại."}
+POST /api/tasks 404 {"error": "Người phụ trách không tồn tại."}
+PATCH /api/tasks/1 200 {"id": 1, "project_id": 1, "title": "Chuẩn bị phòng", "assignee_id": 1, "status": "DOING", "project_name": "Demo workshop", "assignee_name": "An Demo"}
+PATCH /api/tasks/1 200 {"id": 1, "project_id": 1, "title": "Chuẩn bị phòng", "assignee_id": 1, "status": "DONE", "project_name": "Demo workshop", "assignee_name": "An Demo"}
+PATCH /api/tasks/1 400 {"error": "Trạng thái chỉ nhận TODO, DOING hoặc DONE."}
+GET /api/tasks?project_id=1 200 [{"id": 2, "project_id": 1, "title": "Kiểm tra máy chiếu", "assignee_id": null, "status": "TODO", "project_name": "Demo workshop", "assignee_name": null}, {"id": 1, "project_id": 1, "title": "Chuẩn bị phòng", "assignee_id": 1, "status": "DONE", "project_name": "Demo workshop", "assignee_name": "An Demo"}]
+RESTART: tiến trình server mới, cùng file SQLite
+GET /api/tasks 200 [{"id": 2, "project_id": 1, "title": "Kiểm tra máy chiếu", "assignee_id": null, "status": "TODO", "project_name": "Demo workshop", "assignee_name": null}, {"id": 1, "project_id": 1, "title": "Chuẩn bị phòng", "assignee_id": 1, "status": "DONE", "project_name": "Demo workshop", "assignee_name": "An Demo"}]
+HTTP DEMO PASSED: seed lặp, tạo/lọc, validation, status và restart tiến trình.

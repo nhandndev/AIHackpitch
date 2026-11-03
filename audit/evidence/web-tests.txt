@@ -1,0 +1,62 @@
+test_bad_json_and_content_type (test_app.HTTPTests) ... 127.0.0.1 - - [03/Nov/2026 00:35:23] "POST /api/projects HTTP/1.1" 400 -
+127.0.0.1 - - [03/Nov/2026 00:35:23] "POST /api/projects HTTP/1.1" 400 -
+127.0.0.1 - - [03/Nov/2026 00:35:23] "POST /api/projects HTTP/1.1" 400 -
+127.0.0.1 - - [03/Nov/2026 00:35:23] "POST /api/projects HTTP/1.1" 400 -
+ok
+test_create_task_with_and_without_assignee (test_app.HTTPTests) ... 127.0.0.1 - - [03/Nov/2026 00:35:24] "POST /api/projects HTTP/1.1" 201 -
+127.0.0.1 - - [03/Nov/2026 00:35:24] "POST /api/tasks HTTP/1.1" 201 -
+127.0.0.1 - - [03/Nov/2026 00:35:24] "POST /api/tasks HTTP/1.1" 201 -
+ok
+test_invalid_filter_missing_task_and_route (test_app.HTTPTests) ... 127.0.0.1 - - [03/Nov/2026 00:35:24] "GET /api/tasks?project_id=abc HTTP/1.1" 400 -
+127.0.0.1 - - [03/Nov/2026 00:35:24] "GET /api/tasks?project_id= HTTP/1.1" 400 -
+127.0.0.1 - - [03/Nov/2026 00:35:24] "GET /api/tasks?project_id=999 HTTP/1.1" 404 -
+127.0.0.1 - - [03/Nov/2026 00:35:24] "PATCH /api/tasks/999 HTTP/1.1" 404 -
+127.0.0.1 - - [03/Nov/2026 00:35:24] "GET /api/missing HTTP/1.1" 404 -
+ok
+test_members_and_projects_api (test_app.HTTPTests) ... 127.0.0.1 - - [03/Nov/2026 00:35:25] "GET /api/members HTTP/1.1" 200 -
+127.0.0.1 - - [03/Nov/2026 00:35:25] "POST /api/projects HTTP/1.1" 201 -
+127.0.0.1 - - [03/Nov/2026 00:35:25] "GET /api/projects HTTP/1.1" 200 -
+127.0.0.1 - - [03/Nov/2026 00:35:25] "POST /api/projects HTTP/1.1" 400 -
+ok
+test_server_restart_keeps_task_and_status (test_app.HTTPTests) ... 127.0.0.1 - - [03/Nov/2026 00:35:25] "POST /api/projects HTTP/1.1" 201 -
+127.0.0.1 - - [03/Nov/2026 00:35:25] "POST /api/tasks HTTP/1.1" 201 -
+127.0.0.1 - - [03/Nov/2026 00:35:25] "PATCH /api/tasks/1 HTTP/1.1" 200 -
+127.0.0.1 - - [03/Nov/2026 00:35:26] "GET /api/tasks HTTP/1.1" 200 -
+ok
+test_static_page_and_assets (test_app.HTTPTests) ... 127.0.0.1 - - [03/Nov/2026 00:35:26] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Nov/2026 00:35:26] "GET /app.js HTTP/1.1" 200 -
+127.0.0.1 - - [03/Nov/2026 00:35:26] "GET /style.css HTTP/1.1" 200 -
+127.0.0.1 - - [03/Nov/2026 00:35:26] "GET /schema.sql HTTP/1.1" 404 -
+ok
+test_status_update_and_filter_api (test_app.HTTPTests) ... 127.0.0.1 - - [03/Nov/2026 00:35:27] "POST /api/projects HTTP/1.1" 201 -
+127.0.0.1 - - [03/Nov/2026 00:35:27] "POST /api/tasks HTTP/1.1" 201 -
+127.0.0.1 - - [03/Nov/2026 00:35:27] "PATCH /api/tasks/1 HTTP/1.1" 200 -
+127.0.0.1 - - [03/Nov/2026 00:35:27] "PATCH /api/tasks/1 HTTP/1.1" 200 -
+127.0.0.1 - - [03/Nov/2026 00:35:27] "PATCH /api/tasks/1 HTTP/1.1" 200 -
+127.0.0.1 - - [03/Nov/2026 00:35:27] "PATCH /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [03/Nov/2026 00:35:27] "GET /api/tasks?project_id=1 HTTP/1.1" 200 -
+ok
+test_task_validation_and_missing_references (test_app.HTTPTests) ... 127.0.0.1 - - [03/Nov/2026 00:35:27] "POST /api/projects HTTP/1.1" 201 -
+127.0.0.1 - - [03/Nov/2026 00:35:27] "POST /api/tasks HTTP/1.1" 400 -
+127.0.0.1 - - [03/Nov/2026 00:35:27] "POST /api/tasks HTTP/1.1" 404 -
+127.0.0.1 - - [03/Nov/2026 00:35:27] "POST /api/tasks HTTP/1.1" 404 -
+127.0.0.1 - - [03/Nov/2026 00:35:27] "POST /api/tasks HTTP/1.1" 400 -
+127.0.0.1 - - [03/Nov/2026 00:35:27] "GET /api/tasks HTTP/1.1" 200 -
+ok
+test_all_status_values_and_invalid_values (test_app.StoreTests) ... ok
+test_database_foreign_keys_checks_and_nullability (test_app.StoreTests) ... ok
+test_database_restrict_and_seed_unique (test_app.StoreTests) ... ok
+test_filter_and_empty_state (test_app.StoreTests) ... ok
+test_invalid_id_types (test_app.StoreTests) ... ok
+test_missing_project_and_assignee (test_app.StoreTests) ... ok
+test_persistence_new_store_connection (test_app.StoreTests) ... ok
+test_project_name_validation_and_trim (test_app.StoreTests) ... ok
+test_required_title_validation (test_app.StoreTests) ... ok
+test_seed_repeat_preserves_existing_data (test_app.StoreTests) ... ok
+test_sql_html_strings_are_stored_as_data (test_app.StoreTests) ... ok
+test_task_optional_assignee_and_default_status (test_app.StoreTests) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 4.779s
+
+OK

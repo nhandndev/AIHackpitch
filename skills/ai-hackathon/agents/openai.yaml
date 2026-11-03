@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Hackathon Full"
+  short_description: "Làm full, có Markdown A–Z và bản sinh slide đồng bộ"
+  default_prompt: "Dùng $ai-hackathon làm FULL từ đề hoặc plan đính kèm cho nhóm 3 người, gồm sản phẩm, database/ERD, kiểm thử, PROJECT_A_TO_Z.md để hiểu và bảo vệ bài, SLIDE_GEN.md để sinh slide; chia lời nói, chuyển lượt, demo và phản biện cho cả nhóm."

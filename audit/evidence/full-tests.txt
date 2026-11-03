@@ -1,0 +1,25 @@
+test_blank_and_invalid_email (test_workshop.WorkshopTests) ... ok
+test_cancel_and_reregister (test_workshop.WorkshopTests) ... ok
+test_cancel_errors_and_missing_workshop_list (test_workshop.WorkshopTests) ... ok
+test_capacity_must_be_positive_integer (test_workshop.WorkshopTests) ... ok
+test_cli_error_exit_codes_and_invalid_number (test_workshop.WorkshopTests) ... ok
+test_cli_persistence_across_processes (test_workshop.WorkshopTests) ... ok
+test_create_and_empty_lists (test_workshop.WorkshopTests) ... ok
+test_database_capacity_insert_and_update (test_workshop.WorkshopTests) ... ok
+test_database_check_not_null_unique (test_workshop.WorkshopTests) ... ok
+test_database_foreign_keys_and_composite_pk (test_workshop.WorkshopTests) ... ok
+test_database_restrict_delete (test_workshop.WorkshopTests) ... ok
+test_duplicate_registration_is_rejected (test_workshop.WorkshopTests) ... ok
+test_email_unique_case_and_whitespace (test_workshop.WorkshopTests) ... ok
+test_full_workshop_is_rejected (test_workshop.WorkshopTests) ... ok
+test_missing_references_registration (test_workshop.WorkshopTests) ... ok
+test_seed_repeat_is_additive_and_safe_when_full (test_workshop.WorkshopTests) ... ok
+test_sql_input_stays_data (test_workshop.WorkshopTests) ... ok
+test_successful_registration_and_joined_list (test_workshop.WorkshopTests) ... ok
+test_two_processes_compete_for_last_seat_ten_rounds (test_workshop.WorkshopTests) ... ok
+test_two_processes_same_registration (test_workshop.WorkshopTests) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 1.240s
+
+OK

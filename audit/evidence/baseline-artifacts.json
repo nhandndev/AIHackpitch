@@ -1,0 +1,40 @@
+[
+  {
+    "root": "/private/tmp/ai-hackathon-full-test",
+    "documents": [
+      "PROJECT_A_TO_Z.md",
+      "SLIDE_GEN.md"
+    ],
+    "local_links_checked": 44,
+    "erd_embedded_matches_source": true,
+    "erd_tables_columns_match_database": true,
+    "database_tables": [
+      "workshops",
+      "attendees",
+      "registrations"
+    ],
+    "artifact_sha256": {
+      "schema.sql": "e96fdbc68960a66465827f62d854d1880498a88c5ca2f92ea17a2d6c044dc4d2",
+      "workshop.py": "1b6ebb4917f5dc10e5744679b14f212d1c724548b6f8a7f7084c01b49d8de2dd",
+      "README.md": "ea63be2edc07dccc04568481c413d94b0762bf7dbbc1d54c3f35e2d173a7a78f",
+      "demo.py": "c8a5f4a39b1e10eef0e80b581c6481c113777957c86f0d50a06047a137a47928",
+      "tests/test_workshop.py": "a7ef3f91a882752d653d9bc6fef3faa32126d1fce68dcf717aafe89a172138a8",
+      "docs/PROJECT_A_TO_Z.md": "c77869bd8971b2252dc545cfc0107bf2a9055cfac0ee9c039d6c26c1eddc5036",
+      "docs/SLIDE_GEN.md": "4ae7ec8c10c86067bf46bc800b8549b303eb28a2b4919a9641e09fb5ab1d8bae",
+      "docs/diagrams/erd.mmd": "0c8ffc20f38ca195e4a6cdb6ab37640e547c21335e90c881b7cc2c53909a1272"
+    }
+  },
+  {
+    "root": "/private/tmp/ai-hackathon-docs-test",
+    "documents": [
+      "PROJECT_A_TO_Z.md",
+      "SLIDE_GEN.md"
+    ],
+    "local_links_checked": 45,
+    "artifact_sha256": {
+      "PLAN_NHOM.md": "0cf4ad6d434fac53e07116f89d59beb703dae895b7a24f3c31c3e34c4fcd5d8f",
+      "docs/PROJECT_A_TO_Z.md": "ec3ee20d17ba7ab2ff0eedd233a57aac9e25b43c69ee3f514dbb8d1665fc509f",
+      "docs/SLIDE_GEN.md": "600ae2c66046b03dbf81fb056aceda629573d2198e59484a821594668d67c8b9"
+    }
+  }
+]

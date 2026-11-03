@@ -1,0 +1,82 @@
+{
+  "http_requests": [
+    {
+      "method": "GET",
+      "path": "/",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/app.js",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/style.css",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/members",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/tasks",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/projects",
+      "status": 400
+    },
+    {
+      "method": "POST",
+      "path": "/api/projects",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/tasks",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/tasks",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/tasks",
+      "status": 404
+    },
+    {
+      "method": "POST",
+      "path": "/api/tasks",
+      "status": 404
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/tasks/1",
+      "status": 400
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/tasks/1",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/tasks?project_id=1",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/tasks?project_id=999999",
+      "status": 404
+    }
+  ],
+  "sqlite_state_after_server_shutdown": "DONE persisted; two valid tasks only",
+  "ui_browser_interaction": "not verified: CUA unavailable/timeout",
+  "network": "loopback only, temporary DB"
+}
